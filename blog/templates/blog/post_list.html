@@ -7,14 +7,17 @@
         <h1><a href="/">Miłosz Polis</a></h1>
     </div>
     <div>
+        <h1>Oh</h1>
         <p>Published: 04.10.2018, 21:02</p>
         <h2><a href="">My first post</a></h2>
         <p>Dammn!!!!</p>
     </div>
+    {% for post in posts %}
     <div>
-        <p>Omg!</p>
-        <h3>It works!</h3>
-        <p>This is imposible!</p>
+        <p>published: {{post.published_date}}</p>
+        <h3>{{post.title}}</h3>
+        <p>{{post.text|linebreaksbr}}</p>
     </div>
+    {% endfor %}
 </body>
 </html>
